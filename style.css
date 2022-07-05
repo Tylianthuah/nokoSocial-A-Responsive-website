@@ -565,6 +565,23 @@ main .container .right {
   padding: 3rem;
   border-radius: var(--card-border-radius);
   width: 50%;
+  box-shadow: 0 0 0.5rem var(--color-primary);
+  position: relative;
+}
+
+.customize-theme .card .close {
+  height: 2rem;
+  width: 2rem;
+  background-color: var(--color-light);
+  position: absolute;
+  right: 1rem;
+  top:1rem;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-primary);
+  cursor: pointer;
 }
 
 .customize-theme h4 {
@@ -661,10 +678,11 @@ main .container .right {
 }
 
 .customize-theme .choose-bg {
-  display: flex;
+  display: grid;
   align-items: center;
   justify-content: space-between;
   gap: 1.5rem;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .customize-theme .choose-bg > div {
@@ -738,6 +756,9 @@ main .container .right {
   .left .btn {
     display: none;
   }
+  .customize-theme .card {
+    width:75vw;
+  }
 }
 
 /* -------------------------------------------------------------------*/
@@ -794,5 +815,14 @@ main .container .right {
 
   .right {
     display: none;
+  }
+  .customize-theme .card {
+    width:90vw;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .customize-theme .choose-bg {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
