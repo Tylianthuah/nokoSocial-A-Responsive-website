@@ -1,14 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins:wght@300;400;500;600;800&family=Roboto:wght@400;700&family=Rubik:wght@300;400;600;700&family=Urbanist:wght@300;700&display=swap');
 
 :root {
-  --color-dark: hsl(252, 30%, 17%);
-  --color-light: hsl(252, 30%, 95%);
-  --color-white: hsl(252, 30%, 100%);
+  --light-color-lightness :  95%;
+  --dark-color-lightness : 17%;
+  --white-color-lightness : 100%;
+  --color-dark: hsl(252, 30%, var(--dark-color-lightness));
+  --color-light: hsl(252, 30%, var(--light-color-lightness));
+  --color-white: hsl(252, 30%, var(--white-color-lightness));
   --color-primary: hsl(252, 75%, 60%);
   --color-secondary: hsl(252, 100%, 90%);
   --color-success: hsl(120, 95%, 65%);
   --color-danger: hsl(0, 95%, 65%);
-  --color-black: hsl(252, 30%, 10%);
+  --color-black: hsl(252, 30%, 17%);
   --color-gray: hsl(252, 15%, 65%);
 
   --border-radius: 2rem;
@@ -97,6 +100,10 @@ nav .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+nav .container .logo {
+  color: var(--color-primary);
 }
 
 .search-bar {
@@ -661,11 +668,6 @@ main .container .right {
 
 .color .choose-color span:nth-child(5) {
   background: hsl(202, 75%, 60%);
-}
-
-.color .choose-color span:hover {
-  transform: scale(0.8);
-  cursor: pointer;
 }
 
 .color .choose-color span.active {
